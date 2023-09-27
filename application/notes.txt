@@ -1,0 +1,49 @@
+Browser sends get request for localhost:3000/register
+N/E - server reieves request
+N/E - server renders html
+N/E - server respond with html
+B - browser renders html   
+    You - input validation
+User - submit the form 
+B - extracr data from the form input fields
+B - send request to server based on action value
+N/E - server receives the request
+N/E - parse the form data using body-parser
+You - extract data out of req.body
+You - server side validation/sanitize
+You - store data in Database
+You - check the db response
+You - respond for either failure or success of making an account
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+User - enter http://localhost:3000/register/ into URL bar 
+B - browser generates a get request
+B - send get request to http://localhost:3000/register/
+N/E - server receives the request
+N/E/You - routing
+N/E - execute route handler
+N/E/You - render HTML templated
+N/E - respond to browser sending HTML page
+B - browser receives page 
+B - parse/renders HTML
+User - input data into fields
+    You - input validation
+User - click submit
+B - extract data from form
+B - generate our post request
+B -send data to server depending on action value
+N/E - server receives the request
+N/E - parse payload and add it to req.body (body-parser/urlencode)
+N/E/You - routing
+N/E/You - excecute route handler (/register, POST)
+You - extract out of req.body
+You - server side validation/sanitize
+You - insert into users table
+You - check db response
+You - respond for either faulure or success of making an account
+
+
+

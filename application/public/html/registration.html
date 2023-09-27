@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css">
+    <script defer src="../js/registration.js"></script>
+    <title>Registration</title>
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <h1>CSC 317 Website</h1>
+        </header>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="viewpost.html">Videos</a></li>
+                <li><a href="postvideo.html">Upload</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <h2>Registration</h2>
+            <form class="form-container">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input class="input-text" type="text" name="username" id="username" placeholder="Username">
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input class="input-text" type="email" name="email" id="email" placeholder="name@sfsu.edu">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input class="input-text" type="password" name="password" id="password" placeholder="Password">
+                </div>
+                <div class="input-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input class="input-text" type="password" name="confirmPassword" id="confirmPassword"
+                        placeholder="Confirm Password">
+                </div>
+
+                <div>
+                    <input type="checkbox" name="aoc-check" id="aoc-check" required="true">
+                    <label for="aoc-check">Are you 13+ years or older?</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="tos-check" id="tos-check" required="true">
+                    <label for="tos-check">
+                        Do you accept the
+                        <a href="index.html" target="_blank" rel="noopener noreferrer">
+                            Terms and Conditions
+                        </a>
+                    </label>
+                </div>
+                <div>
+                <input class="form-button clear-button" type="reset" value="Clear">
+                <input class="form-button submit-button" type="submit" id="submit" value="Register">
+                </div>
+            </form>
+        </main>
+        <footer class="page-footer">
+            <span id="footer-name">Riel Orque &copy; 2023</span>
+            <a id="email-link" href="mailto:rorque@mail.sfsu.edu">Contact Owner</a>
+        </footer>
+    </div>
+</body>
+</html>

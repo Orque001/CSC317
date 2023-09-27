@@ -1,0 +1,13 @@
+<main class="main-content">
+    <h2>Main Content</h2>
+    <h2>{{user.username}}'s Profile</h2>
+    <div>
+        <p class="profile-username">Username: {{user.username}}</p>
+        <p class="profile-email">Email: {{user.email}}</p>
+    </div>
+    {{#each posts}}
+        {{> card this}}
+    {{/each}}
+
+    
+</main>

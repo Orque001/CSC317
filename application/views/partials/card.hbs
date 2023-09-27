@@ -1,0 +1,32 @@
+<div id="post-{{id}}" class="post-list">
+    <img class="post-img" src="/{{thumbnail}}" alt="">
+    <div class ="post-card">
+        <p class="post-title">{{title}}</p>
+        <p class="post-info">{{description}}</p>
+        <a href="/posts/{{id}}" class="anchor-buttons">Post Details</a>
+        <button type="button" class="deletebtn">Delete</button>
+    </div>
+</div>
+
+<script>
+    document.querySelector('.deletebtn').forEach(button => {
+        button.addEventListener('click', () => {
+            var postId = button.dataset.postId;
+            fetch(`/posts/posts/delete/${postId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then((response) => response.json())
+            .then((data) => {
+                if(data.error){
+                    console.error(data.error);
+                    return;
+                }
+                window.location.href = "/";
+            })
+            .catch(error => console.error('Error. Not deleted.'))
+        });
+    });
+</script>

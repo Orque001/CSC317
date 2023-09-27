@@ -1,0 +1,65 @@
+<nav class="nav-bar">
+    {{> searchbar}}
+    <ul>
+        <li><a href="/">Index</a></li>
+        <li><a href="/main">Main</a></li>
+        <li><a href="/users/profile/{{user.userId}}">Profile</a></li>
+        {{!-- <li><a href="/posts/{{userId}}">Videos</a></li> --}}
+        <li><a href="/postvideo">Upload</a></li>
+        {{#if isLoggedIn}}
+        {{!-- {{> userdropdown}} --}}
+        <li>
+        <a>
+        <form action="/users/logout" method="post">
+            <input type="hidden" value="{{csrf}}">
+            <button class="nav-items" type="submit">Log Out</button>
+        </form>
+        </a>
+        </li>
+        {{else}}
+        <li><a href="/registration">Registration</a></li>
+        <li><a href="/login">Login</a></li>
+        {{/if}}
+    </form>
+    </ul>
+</nav>
+
+<!-- Class video nav-bar
+<div id="sidebartoggle" class="open-sidebar hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<nav id="nav-bar" class="nav-bar">
+    <ul>
+        <li id="side-bar-close" class="side-bar-close">
+            &#x2716;
+        </li>
+        <li>
+            <a href="index.html" class="brand nav-items">
+                <span class="brand-text">
+                    <i style="margin-right: 0.2rem">
+                        i
+                    </i>
+                    VA
+                </span>
+            </a>
+        </li>
+        <li class="search-bar">
+            <input id="search-text" class="search-text" name="searh-text" type="text">
+            <div class="search-button fasfa-search">
+            </div>
+        </li>
+        <li>
+            <a class="nav-items" href="postvideo.html">
+                Post
+            </a>
+        </li>
+        <li>
+            <a href="login.html" id="authenticate-button" class="nav-items">
+                Log in
+            </a>
+        </li>
+    </ul>
+</nav>
+-->

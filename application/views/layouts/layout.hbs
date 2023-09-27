@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{title}}</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  {{#each css}}
+  <link rel="stylesheet" href="/public/css/{{this}}">
+  {{/each}}
+
+  {{#each js}}
+  <script defer type="text/javascript" src="/public/js/{{this}}"></script>
+  {{/each}}
+
+  {{#if (nonEmptyObject messages)}}
+  {{> flashmessage this}}
+  {{/if}}
+  
+  {{!-- {{#if value}}
+  {{/if}}
+
+  {{#unless value}}
+  {{/unless}}
+
+  {{#if value}}
+  {{/else}}
+
+  {{/else}}
+
+  {{#with this.data.user}}
+  {{name}}
+  {{/with}} --}}
+
+<body>
+  <div class="container">
+    {{!-- Linking partials --}}
+    {{> header}}
+    {{> nav}}
+    {{{body}}}
+    {{> footer}}
+  </div>
+</body>
+
+<!-- Class video nav-bar, Sidebar to toggle navbar
+<script>
+  document.getElementById("sidebartoggle").addEventListener("click", function (even) {
+    document.getElementById("nav-bar").classList.add("nav-bar-open");
+    document.getElementById("nav-bar").classList.remove("nav-bar-close");
+  });
+</script>
+<script>
+  document.getElementById("side-bar-close").addEventListener("click", function (even) {
+    document.getElementById("nav-bar").classList.add("side-bar-close");
+    document.getElementById("nav-bar").classList.remove("nav-bar-open");
+  });
+</script>
+-->
+
+</html>

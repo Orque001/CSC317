@@ -1,0 +1,36 @@
+<main class="main-content">
+    <h2>Upload Video</h2>
+    <form id="img-card" class="form-container" action="/posts/create" method="POST" enctype="multipart/form-data">
+        <div class="input-group">
+            <label for="title">Title</label>
+            <input class="input-text" type="text" name="title" id="title" placeholder="Title" >
+        </div>
+
+        <div class="input-group">
+            <label for="description">Description</label>
+            <textarea class="text-area" name="description" row="4" cols="60" id="description" placeholder="Description">
+                </textarea>
+        </div>
+
+        <div>
+            <label class="tags post-lbl-video">Upload Video:</label>
+            <input id="img-select" type="file" name="uploadVideo" required>
+        </div>
+
+        <div class="checkbox-group">
+            <input type="checkbox" name="tos-check" id="tos-check" required="true">
+            <label for="tos-check">
+                Do you accept the
+                <a href="index.html" target="_blank" rel="noopener noreferrer">
+                    Terms and Conditions
+                </a>
+                ?
+            </label>
+        </div>
+
+        <div>
+            <input class="form-button clear-button" type="reset" value="Clear">
+            <input class="form-button submit-button" type="submit" value="Submit">
+        </div>
+    </form>
+</main>

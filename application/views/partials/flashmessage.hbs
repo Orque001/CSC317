@@ -1,0 +1,20 @@
+{{!-- <div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>Log In Failed</strong>
+</div> --}}
+
+
+
+<div id="flash-message">
+    {{#if messages.error}}
+    <div class="alert alert-danger">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>{{messages.error}}</strong>
+    </div>
+    {{else}}
+    <div class="alert alert-success">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>{{messages.success}}</strong>
+    </div>
+    {{/if}}
+</div>
